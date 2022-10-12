@@ -1,0 +1,29 @@
+{
+  "name": "package",
+  "version": "1.0.0",
+  "description": "Segundo proyecto de JS - SENA",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon callback/3_request.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YERSON2345/modo-asincrono.git"
+  },
+  "keywords": [
+    "asincrono",
+    "JS",
+    "SENA"
+  ],
+  "author": "Yerson Bohorquez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YERSON2345/modo-asincrono/issues"
+  },
+  "homepage": "https://github.com/YERSON2345/modo-asincrono#readme",
+  "dependencies": {
+    "nodemon": "^2.0.20",
+    "request": "^2.88.2",
+    "xmlhttprequest": "^1.8.0"
+  }
+}
