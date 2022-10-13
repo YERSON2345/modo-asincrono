@@ -26,22 +26,27 @@ function get_data(endpoint){
     return promise
 }
 
-    function exito(data){
-        const tipos = JSON.parse(data).results
-        //recorrer el arreglo
-        tipos.forEach(function (element) {
-            console.log (`Tipo: ${element.name}`)   
-            console.log(`----------------------`)
-        });
-    }
+function exito(data){
+    const tipos = JSON.parse(data).results
+    //recorrer el arreglo
+    tipos.forEach(function (element) {
+        console.log (`Tipo: ${element.name}`)   
+        console.log(`----------------------`)
+    });
+}
 
 function fallo(status){
     console.log(status)
 }
-//invocar get_data
-get_data(url)
-    .then(function(data){
-        exito(data)
-}).catch(function(error){
-    fallo(Error(error))
-})
+
+const f = async function(){
+    try {
+        let response = await get_data(url) 
+        console.log(response)
+    } catch (status) {
+        console.log(status)
+
+    }
+}
+f()
+
